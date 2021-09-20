@@ -13,9 +13,9 @@ num_cache_nodes = 1
 parameter_group_name = "default.redis6.x"
 }
 
-resource "vpc" "elasticache_vpc"{
+resource "aws_vpc" "elasticache_vpc"{
  cidr_block = "172.16.0.0/16"
- tags {
+ tags = {
    name = "ec_vpc"
  }
 }
